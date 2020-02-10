@@ -4,6 +4,10 @@ Gatsby [Aamu.app](https://aamu.app) starter for creating a blog
 
 ![The index page of the starter blog](https://raw.githubusercontent.com/AamuApp/gatsby-aamu-starter/master/screenshot.jpg "The index page of the starter blog")
 
+If you want to use try this out yourself, you first need to set up a project on Aamu.app which will host your data. 
+
+See the demo site here: **[DEMO](https://gifted-wing-586384.netlify.com/)**
+
 Static sites are scalable, secure and have very little required maintenance. They come with a drawback though. Not everybody feels good editing files, building a project and uploading it somewhere. This is where Aamu.app comes into play.
 
 With Aamu.app and Gatsby you can connect your favorite static site generator with an API that provides an easy to use interface for people writing content and automate the publishing using services like [Travis CI](https://travis-ci.org/) or [Netlify](https://www.netlify.com/).
@@ -13,15 +17,24 @@ With Aamu.app and Gatsby you can connect your favorite static site generator wit
 * Simple content model and structure. Easy to adjust to your needs.
 * Responsive/adaptive images via [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/)
 
-## Contribution
+## Create an Aamu.app account
 
-This project is part of [AamuApp](https://github.com/AamuApp) which means that we’re always open to contributions **and you can be part of userland and shape the project yourself after your first merged pull request**. You can learn more about how AamuApp is organized by visiting [our about repository](https://github.com/AamuApp/about).
+To use this website, you need an [Aamu.app](https://aamu.app/) account. Create one/log into your account and then create a database from the template **gatsby-aamu-portfolio**: 
 
-## Requirements
+![2020-02-10_11-04](https://user-images.githubusercontent.com/433707/74135827-a8d7b100-4bf5-11ea-90c2-e70423077b7f.png)
 
-To use this project you have to have a Aamu.app account. If you don't have one yet you can register at [aamu.app](https://aamu.app/).
+After that, you need an **API key**. Go to database settings for your newly created database and create an API key. Copy-paste that to somewhere safe.
 
-## Getting started
+## Repo usage on a third party hosting service
+
+You can use this repository on Netlify. After creating an Aamu.app database, click this: 
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/AamuApp/gatsby-aamu-starter)
+
+Deployment to Netlify asks your API key which you created previously.
+
+
+## Repo usage on your machine
 
 Install [Yarn](https://yarnpkg.com/en/docs/install) (if you haven't already).
 
