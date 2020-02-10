@@ -19,9 +19,9 @@ With Aamu.app and Gatsby you can connect your favorite static site generator wit
 
 ## Create an Aamu.app account
 
-To use this website, you need an [Aamu.app](https://aamu.app/) account. Create one/log into your account and then create a database from the template **gatsby-aamu-portfolio**: 
+To use this website, you need an [Aamu.app](https://aamu.app/) account. Create one/log into your account and then create a database from the template **gatsby-aamu-starter**: 
 
-![2020-02-10_11-04](https://user-images.githubusercontent.com/433707/74135827-a8d7b100-4bf5-11ea-90c2-e70423077b7f.png)
+![image](https://user-images.githubusercontent.com/433707/74146004-cf531780-4c08-11ea-8607-de9d19a208ae.png)
 
 After that, you need an **API key**. Go to database settings for your newly created database and create an API key. Copy-paste that to somewhere safe.
 
