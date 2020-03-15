@@ -27,11 +27,11 @@ After that, you need an **API key**. Go to database settings for your newly crea
 
 ## Repo usage on a third party hosting service
 
-You can use this repository on Netlify. After creating an Aamu.app database, click this: 
+You can use this repository on Netlify. After creating an Aamu.app database, click this (**first create an API KEY in your Aamu.app database settings!**): 
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/AamuApp/gatsby-aamu-starter)
 
-Deployment to Netlify asks your API key which you created previously.
+Deployment to Netlify asks your **API key** which you created previously.
 
 
 ## Repo usage on your machine
