@@ -23,8 +23,11 @@ module.exports = {
     {
       resolve: 'gatsby-source-graphql',
       options: {
-        fieldName: `aamu`,
+        // Arbitrary name for the remote schema Query type
         typeName: `Aamu`,
+        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+        fieldName: `aamu`,
+        // Url to query from
         url: AAMU_HOST,
         headers: {
           "x-api-key": process.env.AAMU_API_KEY
