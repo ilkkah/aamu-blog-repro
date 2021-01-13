@@ -4,42 +4,35 @@ const remark = require('remark')
 const remark_html = require('remark-html')
 const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js')
-    resolve(
-      graphql(
-        `
-          {
-            aamu {
-              BlogPostCollection {
-                title
-                slug
-              }
-            }
-          }
-          `
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
+  
+  const result = await graphql(`
+    {
+      aamu {
+        BlogPostCollection {
+          title
+          slug
         }
+      }
+    }
+  `);
 
-        const posts = result.data.aamu.BlogPostCollection
-        posts.forEach((post, index) => {
-          createPage({
-            path: `/blog/${post.slug}/`,
-            component: blogPost,
-            context: {
-              slug: post.slug
-            },
-          })
-        })
-      })
-    )
-  })
+  if (result.errors) {
+    return reporter.panicOnBuild('🚨 ERROR: Loading "createPages" query');
+  }
+
+  const posts = result.data.aamu.BlogPostCollection || [];
+  posts.forEach((post, index) => {
+    createPage({
+      path: `/blog/${post.slug}/`,
+      component: path.resolve('./src/templates/blog-post.js'),
+      context: {
+        slug: post.slug
+      },
+    })
+  });
 }
 
 exports.createResolvers = (

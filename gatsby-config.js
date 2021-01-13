@@ -1,12 +1,11 @@
 require('dotenv').config();
 
-const AAMU_HOST = 'https://api.aamu.app/api/v1/graphql/';
+const AAMU_HOST = 'https://ile.aamu.app/api/v1/graphql/';
 
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Aamu.app starter',
   },
-  pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     `gatsby-plugin-netlify-cache`,
     'gatsby-transformer-remark',
