@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const AAMU_HOST = 'https://ile.aamu.app/api/v1/graphql/';
+const AAMU_HOST = 'https://api.aamu.app/api/v1/graphql/';
 
 module.exports = {
   siteMetadata: {
