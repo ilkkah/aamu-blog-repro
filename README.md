@@ -36,13 +36,11 @@ Deployment to Netlify asks your **API key** which you created previously.
 
 ## Repo usage on your machine
 
-Install [Yarn](https://yarnpkg.com/en/docs/install) (if you haven't already).
-
 ### Get the source code and install dependencies.
 
 ```
 $ git clone git@github.com:AamuApp/gatsby-aamu-starter.git
-$ yarn install
+$ npm install
 ```
 
 Or use the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli).
@@ -53,25 +51,25 @@ $ gatsby new aamu-starter https://github.com/AamuApp/gatsby-aamu-starter
 
 ### Set up of the needed content model and create a configuration file
 
-This project comes with a Aamu.app setup command `yarn run setup`.
+This project comes with a Aamu.app setup command `npm run setup`.
 
 ## Crucial Commands
 
 This project comes with a few handy commands for linting and code fixing. The most important ones are the ones to develop and ship code. You can find the most important commands below.
 
-### `yarn run dev`
+### `npm run dev`
 
 Run in the project locally.
 
-### `yarn run build`
+### `npm run build`
 
 Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
 
-### `yarn run deploy`
+### `npm run deploy`
 
 Run a production build into `./public` and publish the site to GitHub pages.
 
-### `yarn run cleanup-repository`
+### `npm run cleanup-repository`
 
 Removes all dependencies, scripts and data from the installation script.
 
