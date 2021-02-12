@@ -6,7 +6,7 @@ Gatsby [Aamu.app](https://aamu.app) starter for creating a blog
 
 If you want to use try this out yourself, you first need to set up a project on Aamu.app which will host your data. 
 
-See the demo site here: **[DEMO](https://hungry-newton-b4a152.netlify.com/)**
+See the demo site here: **[DEMO](https://gatsby-aamu-starter.netlify.com/)**
 
 Static sites are scalable, secure and have very little required maintenance. They come with a drawback though. Not everybody feels good editing files, building a project and uploading it somewhere. This is where Aamu.app comes into play.
 
