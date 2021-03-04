@@ -74,7 +74,7 @@ export const pageQuery = graphql`
         }
         description
       }
-      Person( id:  "3bba9e03-3479-460a-836f-3ab03f6a8790" ) {
+      Person( name: "John Doe" ) {
         name
         bio
         title
