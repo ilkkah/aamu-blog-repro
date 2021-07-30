@@ -17,6 +17,8 @@ With Aamu.app and Gatsby you can connect your favorite static site generator wit
 * Simple content model and structure. Easy to adjust to your needs.
 * Responsive/adaptive images via [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/)
 
+# Installation
+
 ## Create an Aamu.app account
 
 To use this website, you need an [Aamu.app](https://aamu.app/) account. Create one/log into your account and then create a database from the template **gatsby-aamu-starter**: 
