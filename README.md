@@ -19,7 +19,7 @@ With Aamu.app and Gatsby you can connect your favorite static site generator wit
 
 # Installation
 
-## Create an Aamu.app account
+### Create an Aamu.app account
 
 To use this website, you need an [Aamu.app](https://aamu.app/) account. Create one/log into your account and then create a database from the template **gatsby-aamu-starter**: 
 
@@ -27,7 +27,7 @@ To use this website, you need an [Aamu.app](https://aamu.app/) account. Create o
 
 After that, you need an **API key**. Go to database settings for your newly created database and create an API key. Copy-paste that to somewhere safe.
 
-## Deployment to Netlify
+### Deployment to Netlify
 
 You can use this repository on Netlify. After creating an Aamu.app database, click this. 
 
