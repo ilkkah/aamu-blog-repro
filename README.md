@@ -37,7 +37,7 @@ At Netlify, click *Authorize*. You will be taken to a page which asks your *secr
 
 # Development on your local machine
 
-## Get the source code and install dependencies.
+### Get the source code and install dependencies.
 
 ```
 $ git clone git@github.com:AamuApp/gatsby-aamu-starter.git
@@ -50,11 +50,11 @@ Or use the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli).
 $ gatsby new aamu-starter https://github.com/AamuApp/gatsby-aamu-starter
 ```
 
-## Set up of the needed content model and create a configuration file
+### Set up of the needed content model and create a configuration file
 
 This project comes with a Aamu.app setup command `npm run setup`.
 
-## Crucial Commands
+### Crucial Commands
 
 This project comes with a few handy commands for linting and code fixing. The most important ones are the ones to develop and ship code. You can find the most important commands below.
 
@@ -82,13 +82,13 @@ npm run cleanup-repository
 
 
 
-## Roadmap
+# Roadmap
 
 - [x] [make the starter completely responsive](https://github.com/AamuApp/gatsby-aamu-starter/issues/2)
 - [ ] [include tags](https://github.com/AamuApp/gatsby-aamu-starter/issues/3)
 - [x] [support traced placeholders](https://github.com/AamuApp/gatsby-aamu-starter/issues/4)
 - [ ] [add i18n](https://github.com/AamuApp/gatsby-aamu-starter/issues/6)
 
-## Other resources
+# Other resources
 
 - Tutorial video series ["Building a blazing fast website with GatsbyJS and Contentful"](https://www.youtube.com/watch?v=Ek4o40w1tH4&list=PL8KiuH6vpACV-F7jXribe4YveGBhBeG9A) by @Khaledgarbaya
