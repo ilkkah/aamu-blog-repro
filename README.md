@@ -35,7 +35,9 @@ You can use this repository on Netlify. After creating an Aamu.app database, cli
 
 Netlify will ask your permission to clone this repository — click *Authorize*. 
 
-You will be then taken to a page which asks your *secret token*. Enter your API key here..
+You will be then taken to a page which asks your *secret token*. Enter your API key here. 
+
+Submit the form and Netlify will start building your site. This cloned repository will be on your GitHub account.
 
 # Development on your local machine
 
