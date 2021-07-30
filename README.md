@@ -44,8 +44,9 @@ Submit the form and Netlify will start building your site. This cloned repositor
 ### Get the source code and install dependencies.
 
 ```
-$ git clone git@github.com:AamuApp/gatsby-aamu-starter.git
-$ npm install
+git clone git@github.com:AamuApp/gatsby-aamu-starter.git
+cd gatsby-aamu-starter
+npm install
 ```
 
 Or use the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli).
