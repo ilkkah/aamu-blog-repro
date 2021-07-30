@@ -27,7 +27,7 @@ To use this website, you need an [Aamu.app](https://aamu.app/) account. Create o
 
 After that, you need an **API key**. Go to database settings for your newly created database and create an API key. Copy-paste that to somewhere safe.
 
-## Repo usage on a third party hosting service
+## Deployment to Netlify
 
 You can use this repository on Netlify. After creating an Aamu.app database, click this. 
 
@@ -35,10 +35,9 @@ You can use this repository on Netlify. After creating an Aamu.app database, cli
 
 At Netlify, click *Authorize*. You will be taken to a page which asks your *secret token*. Enter your API key here..
 
+# Development on your local machine
 
-## Repo usage on your machine
-
-### Get the source code and install dependencies.
+## Get the source code and install dependencies.
 
 ```
 $ git clone git@github.com:AamuApp/gatsby-aamu-starter.git
@@ -51,7 +50,7 @@ Or use the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli).
 $ gatsby new aamu-starter https://github.com/AamuApp/gatsby-aamu-starter
 ```
 
-### Set up of the needed content model and create a configuration file
+## Set up of the needed content model and create a configuration file
 
 This project comes with a Aamu.app setup command `npm run setup`.
 
@@ -59,21 +58,29 @@ This project comes with a Aamu.app setup command `npm run setup`.
 
 This project comes with a few handy commands for linting and code fixing. The most important ones are the ones to develop and ship code. You can find the most important commands below.
 
-### `npm run dev`
+Run in the project locally:
 
-Run in the project locally.
+```
+npm run dev
+```
 
-### `npm run build`
+Run a production build into `./public`. The result is ready to be put on any static hosting you prefer:
 
-Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
+```
+npm run build
+```
 
-### `npm run deploy`
+Run a production build into `./public` and publish the site to GitHub pages:
+```
+npm run deploy
+```
 
-Run a production build into `./public` and publish the site to GitHub pages.
+Removes all dependencies, scripts and data from the installation script.:
+```
+npm run cleanup-repository
+```
 
-### `npm run cleanup-repository`
 
-Removes all dependencies, scripts and data from the installation script.
 
 ## Roadmap
 
