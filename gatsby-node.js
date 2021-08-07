@@ -6,7 +6,6 @@ const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-
   
   const result = await graphql(`
     {
@@ -33,6 +32,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   });
+}
+
+// https://stackoverflow.com/questions/63124432/how-do-i-configure-mini-css-extract-plugin-in-gatsby
+exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
+  if (stage === "develop" || stage === 'build-javascript') {
+    const config = getConfig()
+    const miniCssExtractPlugin = config.plugins.find(
+      plugin => plugin.constructor.name === 'MiniCssExtractPlugin'
+    )
+    if (miniCssExtractPlugin) {
+      miniCssExtractPlugin.options.ignoreOrder = true
+    }
+    actions.replaceWebpackConfig(config)
+  }
 }
 
 exports.createResolvers = (
