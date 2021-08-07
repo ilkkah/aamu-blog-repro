@@ -23,8 +23,6 @@ With Aamu.app and Gatsby you can connect your favorite static site generator wit
 
 To use this website, you need an [Aamu.app](https://aamu.app/) account. Create one/log into your account and then create a database from the template **gatsby-aamu-starter**: 
 
-![image](https://user-images.githubusercontent.com/433707/74146004-cf531780-4c08-11ea-8607-de9d19a208ae.png)
-
 After that, you need an **API key**. Go to database settings for your newly created database and create an API key. Copy-paste that to somewhere safe.
 
 ### Deployment to Netlify
@@ -39,6 +37,14 @@ You will be then taken to a page which asks your *secret token*. Enter your API 
 
 Submit the form and Netlify will start building your site. This cloned repository will be on your GitHub account.
 
+#### Common Netlify errors
+
+```
+2:33:39 PM: error "gatsby-source-graphql" threw an error while running the sourceNodes lifecycle:
+2:33:39 PM: not finished source and transform nodes - 0.593s
+```
+
+Your Aamu.app API key is wronng or missing.
 # Development on your local machine
 
 ### Get the source code and install dependencies.
