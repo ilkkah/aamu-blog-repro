@@ -74,7 +74,7 @@ export const pageQuery = graphql`
         }
         description
       }
-      Person( x: "1" ) {
+      Person( id: "1" ) {
         name
         bio
         title
