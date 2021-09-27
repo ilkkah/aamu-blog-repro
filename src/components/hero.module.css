@@ -14,14 +14,20 @@
   max-height: 400px;
 }
 
+.heroDetails h3 {
+  font-size: 1.9em;
+  font-weight: 300;
+  margin-bottom: 0.3em;
+}
+
 .heroDetails {
   position: absolute;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   left: 50%;
   bottom: 0;
   transform: translate(-50%, 0);
-  font-size: 14px;
-  padding: 0 0.5em;
+  padding: 0.5em 1.5em;
+  border-radius: 5px 5px 0 0;
 }
 
 @media(min-width: 600px) {
