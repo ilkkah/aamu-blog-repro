@@ -26,7 +26,7 @@ class BlogPostTemplate extends React.Component {
                 display: 'block',
               }}
             >
-              {format(new Date(post.publishDate).valueOf(), 'MMMM Do, yyyy')}
+              {format(new Date(post.publishDate).valueOf(), 'MMMM d, yyyy')}
             </p>
             <div
               dangerouslySetInnerHTML={{
