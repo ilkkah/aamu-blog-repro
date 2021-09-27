@@ -15,7 +15,10 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
+          <Helmet>
+            <title lang="en">{siteTitle}</title>
+            <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+          </Helmet>
           <Hero data={author} />
           <div className="wrapper">
             <ul className="article-list">

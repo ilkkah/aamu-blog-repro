@@ -15,7 +15,10 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
+          <Helmet>
+            <title lang="en">{`${post.title} | ${siteTitle}`}</title>
+            <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+          </Helmet>
           <div className={styles.hero}>
             <Img className={styles.heroImage} alt={post.title} fluid={post.heroImage.image.childImageSharp.fluid} />
           </div>

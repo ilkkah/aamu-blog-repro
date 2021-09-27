@@ -4,7 +4,7 @@ const AAMU_HOST = 'https://api.aamu.app/api/v1/graphql/';
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Aamu.app starter',
+    title: 'Aamu.app blog',
   },
   plugins: [
     'gatsby-transformer-remark',

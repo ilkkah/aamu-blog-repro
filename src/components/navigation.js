@@ -6,10 +6,10 @@ export default () => (
   <nav role="navigation">
     <ul className={styles.navigation}>
       <li className={styles.navigationItem}>
-        <Link to="https://aamu.app"><img className="logo" src="https://aamu.app/img/logo.png" /> Aamu.app</Link>
+        <Link to="/">Blog</Link>
       </li>
       <li className={styles.navigationItem}>
-        <Link to="/">Blog</Link>
+        <Link to="https://aamu.app"><img className="logo" src="/favicon.png" /> Aamu.app</Link>
       </li>
     </ul>
   </nav>
