@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
 import { GatsbyImage } from "gatsby-plugin-image"
 import { format } from 'date-fns'
 import * as styles from './article-preview.module.css'

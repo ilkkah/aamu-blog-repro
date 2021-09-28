@@ -2,8 +2,6 @@ const Promise = require('bluebird')
 const path = require('path')
 const remark = require('remark')
 const remark_html = require('remark-html')
-const remark_images = require('@fec/remark-images');
-const remark_images2 = require('gatsby-remark-images-anywhere');
 const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
