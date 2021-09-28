@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image"
 import { format } from 'date-fns'
 import * as styles from './article-preview.module.css'
 
 export default ({ article }) => (
   <Link to={`/${article.slug}`}>
-    <Img alt="" fluid={article.heroImage.image.childImageSharp.fluid} />
+    <GatsbyImage alt="" image={article.heroImage.image.childImageSharp.gatsbyImageData} />
     <h3>
       {article.title}
     </h3>

@@ -7,7 +7,6 @@ module.exports = {
     title: 'Aamu.app blog',
   },
   plugins: [
-    'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',

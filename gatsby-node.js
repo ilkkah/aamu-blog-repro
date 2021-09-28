@@ -2,6 +2,8 @@ const Promise = require('bluebird')
 const path = require('path')
 const remark = require('remark')
 const remark_html = require('remark-html')
+const remark_images = require('@fec/remark-images');
+const remark_images2 = require('gatsby-remark-images-anywhere');
 const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -13,6 +15,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         BlogPostCollection {
           title
           slug
+          test
+          images {
+            url
+            image {
+              id
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH)
+              }
+            }
+          }
         }
       }
     }
@@ -66,10 +78,10 @@ exports.createResolvers = (
     Aamu_BlogPost: {
       body: {
         type: 'String',
-        resolve(source, args, context, info) {
-          const file = remark()
+        async resolve(source, args, context, info) {
+          const file = await remark()
             .use(remark_html)
-            .processSync(source.body);
+            .process(source.body);
 
           return String(file);
         }

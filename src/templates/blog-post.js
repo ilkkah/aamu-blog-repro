@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from '../components/layout'
 import * as styles from '../components/hero.module.css'
 import { format } from 'date-fns'
@@ -20,7 +20,7 @@ class BlogPostTemplate extends React.Component {
             <link rel="shortcut icon" type="image/png" href="/favicon.png" />
           </Helmet>
           <div className={styles.hero}>
-            <Img className={styles.heroImage} alt={post.title} fluid={post.heroImage.image.childImageSharp.fluid} />
+            <GatsbyImage className={styles.heroImage} alt={post.title} image={post.heroImage.image.childImageSharp.gatsbyImageData} />
           </div>
           <div className="wrapper">
             <h1 className="section-headline">{post.title}</h1>
@@ -56,26 +56,22 @@ export const pageQuery = graphql`
       BlogPost(slug: $slug) {
         title
         publishDate
+        images {
+          url
+          image {
+            id
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH)
+            }
+          }
+        }
         heroImage {
           url
           image {
             id
             childImageSharp {
               id
-              fluid {
-                base64
-                tracedSVG
-                srcWebp
-                srcSetWebp
-                originalImg
-                originalName
-                presentationWidth
-                presentationHeight
-                aspectRatio
-                src
-                srcSet
-                sizes
-              }
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
         }

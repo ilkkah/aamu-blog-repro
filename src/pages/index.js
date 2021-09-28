@@ -17,7 +17,7 @@ class RootIndex extends React.Component {
         <div style={{ background: '#fff' }}>
           <Helmet>
             <title lang="en">{siteTitle}</title>
-            <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+            <meta name="icon" href="/favicon.png" />
           </Helmet>
           <Hero data={author} />
           <div className="wrapper">
@@ -51,26 +51,22 @@ export const pageQuery = graphql`
         title
         slug
         publishDate
+        test
+        images {
+          url
+          image {
+            id
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH)
+            }
+          }
+        }
         heroImage {
           url
           image {
             id
             childImageSharp {
-              id
-              fluid {
-                base64
-                tracedSVG
-                srcWebp
-                srcSetWebp
-                originalImg
-                originalName
-                presentationWidth
-                presentationHeight
-                aspectRatio
-                src
-                srcSet
-                sizes
-              }
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
         }
@@ -84,20 +80,7 @@ export const pageQuery = graphql`
           url
           image {
             childImageSharp {
-              fluid {
-                base64
-                tracedSVG
-                srcWebp
-                srcSetWebp
-                originalImg
-                originalName
-                presentationWidth
-                presentationHeight
-                aspectRatio
-                src
-                srcSet
-                sizes
-              }
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
         }
