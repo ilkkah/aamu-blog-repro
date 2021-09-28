@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import { GatsbyImage } from "gatsby-plugin-image"
+import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import * as styles from '../components/hero.module.css'
 import { format } from 'date-fns'
@@ -11,6 +11,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.aamu.BlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    // console.log(post);
 
     return (
       <Layout location={this.props.location} >
@@ -20,7 +21,7 @@ class BlogPostTemplate extends React.Component {
             <link rel="shortcut icon" type="image/png" href="/favicon.png" />
           </Helmet>
           <div className={styles.hero}>
-            <GatsbyImage className={styles.heroImage} alt={post.title} image={post.heroImage.image.childImageSharp.gatsbyImageData} />
+            <Img className={styles.heroImage} alt={post.title} fluid={post.heroImage.image.childImageSharp.fluid} />
           </div>
           <div className="wrapper">
             <h1 className="section-headline">{post.title}</h1>
@@ -61,7 +62,21 @@ export const pageQuery = graphql`
           image {
             id
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
+              id
+              fluid {
+                base64
+                tracedSVG
+                srcWebp
+                srcSetWebp
+                originalImg
+                originalName
+                presentationWidth
+                presentationHeight
+                aspectRatio
+                src
+                srcSet
+                sizes
+              }
             }
           }
         }
@@ -71,7 +86,20 @@ export const pageQuery = graphql`
             id
             childImageSharp {
               id
-              gatsbyImageData(layout: FULL_WIDTH)
+              fluid {
+                base64
+                tracedSVG
+                srcWebp
+                srcSetWebp
+                originalImg
+                originalName
+                presentationWidth
+                presentationHeight
+                aspectRatio
+                src
+                srcSet
+                sizes
+              }
             }
           }
         }
