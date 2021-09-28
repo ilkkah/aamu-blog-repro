@@ -25,7 +25,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const posts = result.data.aamu.BlogPostCollection || [];
   posts.forEach((post, index) => {
     createPage({
-      path: `/blog/${post.slug}/`,
+      path: `/${post.slug}/`,
       component: path.resolve('./src/templates/blog-post.js'),
       context: {
         slug: post.slug

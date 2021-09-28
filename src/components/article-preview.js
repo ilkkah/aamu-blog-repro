@@ -5,7 +5,7 @@ import { format } from 'date-fns'
 import * as styles from './article-preview.module.css'
 
 export default ({ article }) => (
-  <Link to={`/blog/${article.slug}`}>
+  <Link to={`/${article.slug}`}>
     <Img alt="" fluid={article.heroImage.image.childImageSharp.fluid} />
     <h3>
       {article.title}
