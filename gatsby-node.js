@@ -13,16 +13,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         BlogPostCollection {
           title
           slug
-          test
-          images {
-            url
-            image {
-              id
-              childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH)
-              }
-            }
-          }
         }
       }
     }
@@ -76,10 +66,10 @@ exports.createResolvers = (
     Aamu_BlogPost: {
       body: {
         type: 'String',
-        async resolve(source, args, context, info) {
-          const file = await remark()
+        resolve(source, args, context, info) {
+          const file = remark()
             .use(remark_html)
-            .process(source.body);
+            .processSync(source.body);
 
           return String(file);
         }

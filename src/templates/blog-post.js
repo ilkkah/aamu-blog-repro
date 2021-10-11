@@ -2,36 +2,34 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from '../components/layout'
-import * as styles from '../components/hero.module.css'
+import * as styles from './blog-post.module.css'
 import { format } from 'date-fns'
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.aamu.BlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    // console.log(post);
 
     return (
       <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
+        <div>
           <Helmet>
             <title lang="en">{`${post.title} | ${siteTitle}`}</title>
             <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />        
           </Helmet>
-          <div className={styles.hero}>
-            <Img className={styles.heroImage} alt={post.title} fluid={post.heroImage.image.childImageSharp.fluid} />
+          <div>
+            <GatsbyImage alt={post.title} image={post.heroImage.image.childImageSharp.gatsbyImageData} />
           </div>
-          <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
-            <p
-              style={{
-                display: 'block',
-              }}
-            >
-              {format(new Date(post.publishDate).valueOf(), 'MMMM d, yyyy')}
-            </p>
+          <div className={styles.blogPost}>
+            <h1 className={styles.sectionHeadline}>{post.title}</h1>
+            <div className={styles.blogPostMeta}>
+              <GatsbyImage className={styles.author} alt={post.author.name} image={post.author.image.image.childImageSharp.gatsbyImageData} /> {format(new Date(post.publishDate).valueOf(), 'MMMM d, yyyy')} by {post.author.name}
+            </div>
             <div
               dangerouslySetInnerHTML={{
                 __html: post.body,
@@ -57,54 +55,41 @@ export const pageQuery = graphql`
       BlogPost(slug: $slug) {
         title
         publishDate
-        images {
-          url
-          image {
-            id
-            childImageSharp {
-              id
-              fluid {
-                base64
-                tracedSVG
-                srcWebp
-                srcSetWebp
-                originalImg
-                originalName
-                presentationWidth
-                presentationHeight
-                aspectRatio
-                src
-                srcSet
-                sizes
-              }
-            }
-          }
-        }
         heroImage {
           url
           image {
             id
             childImageSharp {
-              id
-              fluid {
-                base64
-                tracedSVG
-                srcWebp
-                srcSetWebp
-                originalImg
-                originalName
-                presentationWidth
-                presentationHeight
-                aspectRatio
-                src
-                srcSet
-                sizes
-              }
+              gatsbyImageData(
+                placeholder: BLURRED
+                layout: FULL_WIDTH
+              )
             }
           }
         }
         body
         slug
+        author {
+          id
+          created
+          updated
+          name
+          bio
+          title
+          image {
+            url
+            image {
+              id
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  layout: CONSTRAINED
+                  width: 100
+                )
+              }
+            }
+          }
+        }
       }
     }
   }

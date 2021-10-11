@@ -13,11 +13,8 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
+        <div>
           <Helmet title={siteTitle} />
-          <div className={styles.hero}>
-            Blog
-          </div>
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>
             <ul className="article-list">
@@ -55,21 +52,7 @@ export const pageQuery = graphql`
               image {
                 id
                 childImageSharp {
-                  id
-                  fluid {
-                    base64
-                    tracedSVG
-                    srcWebp
-                    srcSetWebp
-                    originalImg
-                    originalName
-                    presentationWidth
-                    presentationHeight
-                    aspectRatio
-                    src
-                    srcSet
-                    sizes
-                  }
+                  gatsbyImageData(layout: FULL_WIDTH)
                 }
               }
             }

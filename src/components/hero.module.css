@@ -1,32 +1,25 @@
 .hero {
   position: relative;
-  background: #000;
   color: #000;
   text-align: center;
+  box-sizing: border-box;
 }
 
-.heroImage {
-  /*
-    Ensure golden ratio for the hero size while limiting it to some extend to
-    the viewport width
-  */
-  height: 61.8vh;
-  max-height: 400px;
+.hero {
+  padding: 50px 0 50px 0;
 }
 
-.heroDetails h3 {
-  font-size: 1.9em;
-  font-weight: 300;
-  margin-bottom: 0.3em;
+.hero h2 {
+  font-weight: normal;
 }
 
-.heroDetails {
-  position: absolute;
-  background: rgba(255, 255, 255, 1);
-  left: 5px;
-  top: 45px;
-  padding: 0.5em 1.5em;
-  border-radius: 3px;
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero h1, .hero h2 {
+  font-family: inherit;
+  margin: 0;
 }
 
 @media(min-width: 600px) {
@@ -41,12 +34,3 @@
   }
 }
 
-.heroHeadline {
-  margin: 0;
-}
-
-.heroTitle {
-  margin: 0;
-  font-size: 1.125em;
-  font-weight: bold;
-}

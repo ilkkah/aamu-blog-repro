@@ -10,16 +10,18 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.aamu.BlogPostCollection')
-    const author = get(this, 'props.data.aamu.Person')
 
     return (
       <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
+        <div>
           <Helmet>
             <title lang="en">{siteTitle}</title>
             <meta name="icon" href="/favicon.png" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />            
           </Helmet>
-          <Hero data={author} />
+          <Hero />
           <div className="wrapper">
             <ul className="article-list">
               {posts.map((node) => {
@@ -51,39 +53,19 @@ export const pageQuery = graphql`
         title
         slug
         publishDate
-        test
-        images {
-          url
-          image {
-            id
-            childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
-            }
-          }
-        }
         heroImage {
           url
           image {
             id
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
+              gatsbyImageData(
+                placeholder: BLURRED
+                layout: FULL_WIDTH
+              )
             }
           }
         }
         description
-      }
-      Person( id: "1" ) {
-        name
-        bio
-        title
-        image {
-          url
-          image {
-            childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
-            }
-          }
-        }
       }
     }
   }
