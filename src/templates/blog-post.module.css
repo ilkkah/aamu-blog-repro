@@ -13,8 +13,13 @@
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.blog-post a {
+.blog-post-article a {
   color: red;
+}
+
+.blog-post-article img {
+  float: left;
+  margin-right: 20px;
 }
 
 .blog-post {

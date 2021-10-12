@@ -30,7 +30,7 @@ class BlogPostTemplate extends React.Component {
             <div className={styles.blogPostMeta}>
               <GatsbyImage className={styles.author} alt={post.author.name} image={post.author.image.image.childImageSharp.gatsbyImageData} /> by {post.author.name} on {format(new Date(post.publishDate).valueOf(), 'MMMM d, yyyy')}
             </div>
-            <div
+            <div className={styles.blogPostArticle}
               dangerouslySetInnerHTML={{
                 __html: post.body,
               }}
