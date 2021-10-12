@@ -28,7 +28,7 @@ class BlogPostTemplate extends React.Component {
           <div className={styles.blogPost}>
             <h1 className={styles.sectionHeadline}>{post.title}</h1>
             <div className={styles.blogPostMeta}>
-              <GatsbyImage className={styles.author} alt={post.author.name} image={post.author.image.image.childImageSharp.gatsbyImageData} /> {format(new Date(post.publishDate).valueOf(), 'MMMM d, yyyy')} by {post.author.name}
+              <GatsbyImage className={styles.author} alt={post.author.name} image={post.author.image.image.childImageSharp.gatsbyImageData} /> by {post.author.name} on {format(new Date(post.publishDate).valueOf(), 'MMMM d, yyyy')}
             </div>
             <div
               dangerouslySetInnerHTML={{
