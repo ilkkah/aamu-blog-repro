@@ -5,7 +5,7 @@ import { format } from 'date-fns'
 import * as styles from './article-preview.module.css'
 
 export default ({ article }) => (
-  <Link to={`/${article.slug}`}>
+  <Link to={`/${article.slug}`} className={styles.articlePreview}>
     <GatsbyImage alt="" image={article.heroImage.image.childImageSharp.gatsbyImageData} />
     <h3>
       {article.title}
