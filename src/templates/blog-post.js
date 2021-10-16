@@ -20,7 +20,8 @@ class BlogPostTemplate extends React.Component {
             <link rel="shortcut icon" type="image/png" href="/favicon.png" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-            <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />        
+            <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+            <script src="https://ilkkah.aamu.app/livechat.js" data-username="" data-useremail="" data-host="ilkkah" data-pid="0a597a28d3041a8b31a4e6792e5fc132"></script>
           </Helmet>
           <div>
             <GatsbyImage alt={post.title} image={post.heroImage.image.childImageSharp.gatsbyImageData} />
