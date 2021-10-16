@@ -4,6 +4,9 @@ const remark = require('remark')
 const remark_html = require('remark-html')
 const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
 
+const normalize = require('mdurl/encode.js');
+const all = require('mdast-util-to-hast/lib/all.js')
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
   
@@ -68,7 +71,19 @@ exports.createResolvers = (
         type: 'String',
         resolve(source, args, context, info) {
           const file = remark()
-            .use(remark_html)
+            .use(remark_html, {
+              handlers: {
+                link(h, node) {
+                  const props = { href: normalize(node.url), target: '_blank' }
+
+                  if (node.title !== null && node.title !== undefined) {
+                    props.title = node.title
+                  }
+
+                  return h(node, 'a', props, all(h, node))
+                }
+              }
+            })
             .processSync(source.body);
 
           return String(file);
@@ -94,3 +109,5 @@ exports.createResolvers = (
     },
   })
 }
+
+
