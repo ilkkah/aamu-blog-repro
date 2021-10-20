@@ -8,7 +8,7 @@ If you want to try this out yourself, you first need to set up a project on Aamu
 
 ### Create an Aamu.app account
 
-To use this website, you need an [Aamu.app](https://aamu.app/) account. Create one/log into your account and then create a database from the template **gatsby-aamu-starter**: 
+To use this website, you need an [Aamu.app](https://aamu.app/) account. Create one/log into your account and then create a database from the template **aamu-blog**: 
 
 After that, you need an **API key**. Go to database settings for your newly created database and create an API key. Copy-paste that to somewhere safe.
 
