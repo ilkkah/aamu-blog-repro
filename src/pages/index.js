@@ -50,7 +50,7 @@ export const pageQuery = graphql`
       }
     }
     aamu {
-      BlogPostCollection(sort: { publishDate: DESC }) {
+      BlogPostCollection (filter: { status: { EQ: "published" }}, sort: { publishDate: DESC }) {
         title
         slug
         publishDate

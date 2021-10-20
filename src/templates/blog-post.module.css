@@ -18,8 +18,7 @@
 }
 
 .blog-post-article img {
-  float: left;
-  margin: 0 20px 20px 0;
+  margin: 20px auto;
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -28,4 +27,13 @@
   font-family: "IBM Plex Serif",ui-serif,Georgia,Cambria,Times New Roman,Times,serif;
   font-size: 1.5rem;
   padding-bottom: 200px;
+}
+
+p > code {
+  background-color: #eee;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  padding: 0 0.5em;
+  display: inline-block;
+  white-space: nowrap;
 }

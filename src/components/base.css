@@ -11,13 +11,13 @@ body {
 img {
   display: block;
   max-width: 100%;
-  /* opacity: inherit !important; */
+  will-change: transform;
+  image-rendering: -webkit-optimize-contrast;
 }
 
-a {
-  /* color: currentColor; */
+.remark-highlight {
+  font-size: 1rem;
 }
-
 /**
  * article grid
  */

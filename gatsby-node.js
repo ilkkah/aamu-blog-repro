@@ -1,4 +1,3 @@
-const Promise = require('bluebird')
 const path = require('path')
 const remark = require('remark')
 const remark_html = require('remark-html')
@@ -6,6 +5,16 @@ const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
 
 const normalize = require('mdurl/encode.js');
 const all = require('mdast-util-to-hast/lib/all.js')
+
+// highlighter
+const remark_prism = require('remark-prism')
+const merge = require('deepmerge');
+const github = require('hast-util-sanitize/lib/github');
+
+// Preserve className attributes when sanitizing the HTML
+// This is necessary for syntax highlighting
+const schema = merge(github, { attributes: { '*': ['className'] } });
+ 
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -16,6 +25,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         BlogPostCollection {
           title
           slug
+          status
         }
       }
     }
@@ -72,6 +82,7 @@ exports.createResolvers = (
         resolve(source, args, context, info) {
           const file = remark()
             .use(remark_html, {
+              sanitize: schema,
               handlers: {
                 link(h, node) {
                   const props = { href: normalize(node.url), target: '_blank' }
@@ -84,6 +95,7 @@ exports.createResolvers = (
                 }
               }
             })
+            .use(remark_prism)
             .processSync(source.body);
 
           return String(file);
