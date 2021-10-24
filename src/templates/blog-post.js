@@ -28,6 +28,9 @@ class BlogPostTemplate extends React.Component {
             <meta name="twitter:image" content={post.heroImage.url} />
             <meta property="og:logo" content="https://st.aamu.app/img/logo.png" />
             <meta property="og:image" content={post.heroImage.url} />
+            <meta property="og:description" content={post.description} /> 
+            <meta name="description" content={post.description} />  
+            <meta name="twitter:description" content={post.description} />
           </Helmet>
           <div>
             <GatsbyImage alt={post.title} image={post.heroImage.image.childImageSharp.gatsbyImageData} />
@@ -62,6 +65,7 @@ export const pageQuery = graphql`
       BlogPost(slug: $slug) {
         title
         publishDate
+        description
         heroImage {
           url
           image {
