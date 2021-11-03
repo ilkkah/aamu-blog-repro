@@ -27,7 +27,8 @@
 }
 
 .navigationItem a img {
-  max-width: 30px;
-  max-height: 30px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
+  border-radius: 50%;
 }
