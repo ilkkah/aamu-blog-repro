@@ -17,7 +17,7 @@ class BlogPostTemplate extends React.Component {
         <div>
           <Helmet>
             <title lang="en">{`${post.title} | ${siteTitle}`}</title>
-            <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+            <link rel="shortcut icon" type="image/png" href="https://st.aamu.app/img/logo.png" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
             <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
