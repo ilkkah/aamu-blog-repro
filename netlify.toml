@@ -12,3 +12,8 @@ incoming-hooks = ["Aamu.app"]
 
 [template.environment]
 AAMU_API_KEY = "change me for your secret token"
+
+[[headers]]
+   for = "/*"
+   [headers.values]
+      Access-Control-Allow-Origin = "*"
