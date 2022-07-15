@@ -8,11 +8,6 @@ const Default404 = ({location}) => {
             <div style={{ display: `flex`, flexDirection: `column`, height: `50vh`, padding: `1rem` }}>
                 <div style={{flex: `1`}}>
                     <p style={{textAlign: `center`}}>Whoops! Page Not Found</p>
-                    <p style={{textAlign: `center`}}>
-                        <Link 
-                            className="link-with-arrow"
-                            to="/shop">Back to the shop</Link>
-                    </p>
                 </div>
             </div>
         </Layout>
