@@ -63,7 +63,3 @@ public
 # gatsby cache folder
 .cache
 
-# secrets
-.contentful.json
-.env*
-!.env.example
