@@ -60,3 +60,4 @@ public
 # gatsby cache folder
 .cache
 
+package-lock.json
